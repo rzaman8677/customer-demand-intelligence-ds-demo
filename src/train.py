@@ -23,6 +23,10 @@ def train_model(data_path: str, model_dir: str = "models"):
         X, y, test_size=0.2, random_state=42
     )
 
+    # TODO [UNCOMMENT TO TRY A STRONGER BASELINE]:
+    # model = RandomForestRegressor(
+    #     n_estimators=400, max_depth=12, min_samples_split=5, random_state=42
+    # )
     model = RandomForestRegressor(n_estimators=200, random_state=42)
     model.fit(X_train, y_train)
 
