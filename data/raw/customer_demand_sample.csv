@@ -1,0 +1,15 @@
+date,region,product_category,customer_segment,marketing_spend,price_index,competitor_index,support_tickets,feature_requests,promo_flag,demand_units
+2026-01-01,North,Electronics,SMB,1200,1.02,0.98,14,9,1,240
+2026-01-08,North,Electronics,Enterprise,1800,1.01,0.99,10,12,0,265
+2026-01-15,South,Home,SMB,950,0.99,1.04,18,6,1,205
+2026-01-22,South,Home,Enterprise,1400,1.03,1.01,11,8,0,230
+2026-02-01,West,Electronics,SMB,1600,1.00,0.97,13,11,1,278
+2026-02-08,West,Home,Enterprise,1100,1.04,1.03,16,7,0,212
+2026-02-15,East,Electronics,SMB,1750,0.98,1.00,12,13,1,290
+2026-02-22,East,Home,Enterprise,1000,1.05,1.06,19,5,0,198
+2026-03-01,North,Home,SMB,980,1.01,1.02,15,7,0,215
+2026-03-08,South,Electronics,Enterprise,1900,0.99,0.96,9,14,1,305
+2026-03-15,West,Home,SMB,1050,1.02,1.04,17,6,0,207
+2026-03-22,East,Electronics,Enterprise,2000,0.97,0.95,8,15,1,320
+
+# [Customize before commit] Replace with your real or synthetic demo data at larger scale (e.g., 5k+ rows).
