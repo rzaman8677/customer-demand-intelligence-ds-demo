@@ -20,8 +20,8 @@ def evaluate(model_path: str = "models/baseline_demand_model.joblib", output_dir
         "rmse": float(mean_squared_error(y_test, preds) ** 0.5),
         "r2": float(r2_score(y_test, preds)),
         # TODO [UNCOMMENT AFTER ENABLED NUMPY IMPORT]:
-        # "mape": float(np.mean(np.abs((y_test - preds) / np.clip(np.abs(y_test), 1e-8, None))) * 100),
-        # "under_forecast_rate": float(np.mean(preds < y_test)),
+        "mape": float(np.mean(np.abs((y_test - preds) / np.clip(np.abs(y_test), 1e-8, None))) * 100),
+        "under_forecast_rate": float(np.mean(preds < y_test)),
     }
 
     report_path = os.path.join(output_dir, "metrics.json")
