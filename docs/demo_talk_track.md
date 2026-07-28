@@ -7,7 +7,7 @@
 > [Customize before commit] Replace opening with your team/domain context.
 
 ## Problem Framing
-- Teams often react to customer demand instead of forecasting it properly.
+- Teams often react to customer demand instead of forecasting it.
 - We use support, feature requests, pricing, and promo signals to estimate demand units.
 
 ## Data + Features
