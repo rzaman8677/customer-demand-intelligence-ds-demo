@@ -13,10 +13,17 @@ def preprocess(df: pd.DataFrame) -> pd.DataFrame:
     df["date"] = pd.to_datetime(df["date"])
     df["month"] = df["date"].dt.month
     df["weekofyear"] = df["date"].dt.isocalendar().week.astype(int)
+    # TODO [UNCOMMENT TO ADD TEMPORAL DEMAND FEATURES]:
+    # df = df.sort_values("date")
+    # df["lag_1_demand"] = df["demand_units"].shift(1)
+    # df["rolling_4w_demand_mean"] = df["demand_units"].rolling(window=4, min_periods=1).mean()
+    # df["rolling_4w_demand_std"] = df["demand_units"].rolling(window=4, min_periods=1).std().fillna(0)
 
     categorical_cols = ["region", "product_category", "customer_segment"]
     df = pd.get_dummies(df, columns=categorical_cols, drop_first=True)
 
+    # TODO [UNCOMMENT IF lag_1_demand IS ENABLED]:
+    # df = df.dropna(subset=["lag_1_demand"]).reset_index(drop=True)
     return df
 
 
